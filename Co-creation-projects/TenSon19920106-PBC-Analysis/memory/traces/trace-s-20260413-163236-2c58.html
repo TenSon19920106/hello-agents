@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trace: s-20260413-163236-2c58</title>
+    <style>
+        body {
+            font-family: 'Consolas', 'Monaco', monospace;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+        }
+        .header {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            color: #4af626;
+        }
+        .stats-panel {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-item {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #4af626;
+        }
+        .stat-label {
+            display: block;
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            display: block;
+            color: #e0e0e0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .tool-stats {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .tool-stats th, .tool-stats td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        .tool-stats th {
+            color: #4af626;
+        }
+        .error-list {
+            list-style: none;
+            padding: 0;
+        }
+        .error-list li {
+            background: #331111;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 3px solid #ff4444;
+        }
+        .events-container {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .event {
+            border: 1px solid #333;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: #1a1a1a;
+        }
+        .event-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .step {
+            color: #888;
+            font-size: 12px;
+        }
+        .timestamp {
+            color: #666;
+            font-size: 11px;
+        }
+        .event-type {
+            color: #4af626;
+            font-weight: bold;
+        }
+        .expandable {
+            cursor: pointer;
+            color: #4af626;
+            user-select: none;
+        }
+        .expandable:hover {
+            color: #6fff48;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #0d0d0d;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .details pre {
+            margin: 0;
+            color: #e0e0e0;
+        }
+        .tool-call {
+            border-left: 3px solid #4af626;
+        }
+        .tool-result {
+            border-left: 3px solid #ffd700;
+        }
+        .error {
+            border-left: 3px solid #ff4444;
+            background: #2a1a1a;
+        }
+        .model-output {
+            border-left: 3px solid #00bfff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Trace Session: s-20260413-163236-2c58</h1>
+        <p>生成时间: 2026-04-13 16:32:36</p>
+    </div>
+
+    <div class="events-container">
+        <h2>📋 事件列表</h2>
+
+        <div class="event">
+            <div class="event-header">
+                <span class="step">Step -</span>
+                <span class="timestamp">2026-04-13T16:32:36.662388</span>
+                <span class="event-type">session_start</span>
+                <span class="expandable" onclick="toggleDetails('details-1')">[▼ 详情]</span>
+            </div>
+            <div id="details-1" class="details">
+                <pre>{
+  "agent_name": "PBC流程编排",
+  "agent_type": "SimpleAgent"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <span class="step">Step -</span>
+                <span class="timestamp">2026-04-13T16:32:36.663387</span>
+                <span class="event-type">message_written</span>
+                <span class="expandable" onclick="toggleDetails('details-2')">[▼ 详情]</span>
+            </div>
+            <div id="details-2" class="details">
+                <pre>{
+  "role": "user",
+  "content": "请将下列 PBC JSON 提交到绩效制订接口（若未配置请说明干跑结果）：\n{\"gh\": \"80025013\", \"khnf\": 3, \"khjd\": 0, \"dllzb\": [{\"khmd\": \"提升核心链路稳定性\", \"wd\": 2, \"kpi\": \"峰值下单失败率\", \"mb\": \"降至0.15%以内\", \"ly\": 3, \"qz\": 40.0, \"jffs\": \"目标达成率\"}, {\"khmd\": \"解决历史遗留问题\", \"wd\": 2, \"kpi\": \"历史遗留问题闭环数量\", \"mb\": \"完成4个\", \"ly\": 3, \"qz\": 20.0, \"jffs\": \"计数法\"}], \"dxlzb\": [{\"khmd\": \"保障系统稳定性与发布效率\", \"zdgz\": \"订单中台与结算链路稳定性治理；上线灰度发布策略，缩短回滚时间\", \"ly\": 3, \"qz\": 40.0, \"jffs\": \"关键事件评分法\"}], \"grcz\": [{\"dtgnl\": \"熔断与降级策略设计能力\", \"jhtscs\": \"完成支付渠道熔断与配额治理项目\", \"sxzy\": \"原文未提及\", \"jhwcsj\": \"2026-06-30\"}]}"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 1</span>
+                <span class="timestamp">2026-04-13T16:32:49.961698</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-3')">[▼ 详情]</span>
+            </div>
+            <div id="details-3" class="details">
+                <pre>{
+  "content": "我将为您提交这个 PBC JSON 到绩效制订接口。",
+  "tool_calls": 1,
+  "usage": {
+    "prompt_tokens": 1817,
+    "completion_tokens": 518,
+    "total_tokens": 2335
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-call">
+            <div class="event-header">
+                <span class="step">Step 1</span>
+                <span class="timestamp">2026-04-13T16:32:49.962704</span>
+                <span class="event-type">tool_call</span>
+                <span class="expandable" onclick="toggleDetails('details-4')">[▼ 详情]</span>
+            </div>
+            <div id="details-4" class="details">
+                <pre>{
+  "tool_name": "submit_pbc_planning",
+  "tool_call_id": "call_-7715346621944298515",
+  "args": {
+    "payload_json": "{\"gh\": \"80025013\", \"khnf\": 3, \"khjd\": 0, \"dllzb\": [{\"khmd\": \"提升核心链路稳定性\", \"wd\": 2, \"kpi\": \"峰值下单失败率\", \"mb\": \"降至0.15%以内\", \"ly\": 3, \"qz\": 40.0, \"jffs\": \"目标达成率\"}, {\"khmd\": \"解决历史遗留问题\", \"wd\": 2, \"kpi\": \"历史遗留问题闭环数量\", \"mb\": \"完成4个\", \"ly\": 3, \"qz\": 20.0, \"jffs\": \"计数法\"}], \"dxlzb\": [{\"khmd\": \"保障系统稳定性与发布效率\", \"zdgz\": \"订单中台与结算链路稳定性治理；上线灰度发布策略，缩短回滚时间\", \"ly\": 3, \"qz\": 40.0, \"jffs\": \"关键事件评分法\"}], \"grcz\": [{\"dtgnl\": \"熔断与降级策略设计能力\", \"jhtscs\": \"完成支付渠道熔断与配额治理项目\", \"sxzy\": \"原文未提及\", \"jhwcsj\": \"2026-06-30\"}]}"
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event tool-result">
+            <div class="event-header">
+                <span class="step">Step 1</span>
+                <span class="timestamp">2026-04-13T16:32:49.962704</span>
+                <span class="event-type">tool_result</span>
+                <span class="expandable" onclick="toggleDetails('details-5')">[▼ 详情]</span>
+            </div>
+            <div id="details-5" class="details">
+                <pre>{
+  "tool_name": "submit_pbc_planning",
+  "tool_call_id": "call_-7715346621944298515",
+  "result": "干跑：未配置 PBC_PLANNING_URL，未发起请求。载荷顶层键: gh,khnf,khjd,dllzb,dxlzb,grcz"
+}</pre>
+            </div>
+        </div>
+
+        <div class="event model-output">
+            <div class="event-header">
+                <span class="step">Step 2</span>
+                <span class="timestamp">2026-04-13T16:33:09.288192</span>
+                <span class="event-type">model_output</span>
+                <span class="expandable" onclick="toggleDetails('details-6')">[▼ 详情]</span>
+            </div>
+            <div id="details-6" class="details">
+                <pre>{
+  "content": "## 提交结果\n\n**状态：干跑模式（未实际提交）**\n\n### 说明\n由于未配置 `PBC_PLANNING_URL` 环境变量，系统未发起实际的 HTTP 请求，仅进行了干跑验证。\n\n### 载荷验证结果\n✅ JSON 格式正确  \n✅ 载荷结构完整，包含以下顶层键：\n- `gh` - 工号\n- `khnf` - 考核年份\n- `khjd` - 考核阶段\n- `dllzb` - 定量类指标（2项）\n- `dxlzb` - 定性类指标（1项）\n- `grcz` - 个人成长（1项）\n\n### PBC 内容摘要\n| 类别 | 考核目标 | 权重 |\n|------|----------|------|\n| 定量指标 | 提升核心链路稳定性 | 40% |\n| 定量指标 | 解决历史遗留问题 | 20% |\n| 定性指标 | 保障系统稳定性与发布效率 | 40% |\n| 个人成长 | 熔断与降级策略设计能力 | - |\n\n---\n\n如需实际提交，请先配置 `PBC_PLANNING_URL` 环境变量，然后重新执行提交操作。",
+  "tool_calls": 0,
+  "usage": {
+    "prompt_tokens": 2165,
+    "completion_tokens": 360,
+    "total_tokens": 2525
+  }
+}</pre>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="event-header">
+                <span class="step">Step -</span>
+                <span class="timestamp">2026-04-13T16:33:09.289199</span>
+                <span class="event-type">session_end</span>
+                <span class="expandable" onclick="toggleDetails('details-7')">[▼ 详情]</span>
+            </div>
+            <div id="details-7" class="details">
+                <pre>{
+  "duration": 32.634812,
+  "total_steps": 2,
+  "final_answer": "## 提交结果\n\n**状态：干跑模式（未实际提交）**\n\n### 说明\n由于未配置 `PBC_PLANNING_URL` 环境变量，系统未发起实际的 HTTP 请求，仅进行了干跑验证。\n\n### 载荷验证结果\n✅ JSON 格式正确  \n✅ 载荷结构完整，包含以下顶层键：\n- `gh` - 工号\n- `khnf` - 考核年份\n- `khjd` - 考核阶段\n- `dllzb` - 定量类指标（2项）\n- `dxlzb` - 定性类指标（1项）\n- `grcz` - 个人成长（1项）\n\n### PBC 内容摘要\n| 类别 | 考核目标 | 权重 |\n|------|----------|------|\n| 定量指标 | 提升核心链路稳定性 | 40% |\n| 定量指标 | 解决历史遗留问题 | 20% |\n| 定性指标 | 保障系统稳定性与发布效率 | 40% |\n| 个人成长 | 熔断与降级策略设计能力 | - |\n\n---\n\n如需实际提交，请先配置 `PBC_PLANNING_URL` 环境变量，然后重新执行提交操作。",
+  "status": "success"
+}</pre>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="stats-panel">
+        <h2>📊 会话统计</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-label">总步骤数</span>
+                <span class="stat-value">2</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">总 Token</span>
+                <span class="stat-value">4,860</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">总成本</span>
+                <span class="stat-value">$0.0000</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">会话时长</span>
+                <span class="stat-value">32.6s</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">模型调用次数</span>
+                <span class="stat-value">2</span>
+            </div>
+        </div>
+
+        <h3>🔧 工具调用统计</h3>
+        <table class="tool-stats">
+            <tr><th>工具名称</th><th>调用次数</th></tr>
+            <tr><td>submit_pbc_planning</td><td>1</td></tr>
+
+        </table>
+
+        
+    </div>
+
+    <script>
+        function toggleDetails(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === 'none' || el.style.display === '') {
+                el.style.display = 'block';
+            } else {
+                el.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
